@@ -1,5 +1,5 @@
 <?php
-//seldva 18
+//seldva 21
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +18,4 @@ Route::post('threads', 'ThreadsController@store');
 Route::get('/threads/{channel}', 'ThreadsController@index');
 Route::post('/threads/{chanel}/{thread}/replies', 'RepliesController@store');
 
+Route::post('/replies/{reply}/favorites', 'FavoritesController@store');
